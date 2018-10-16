@@ -6,12 +6,11 @@ putty -> Connection -> Seconds between keepalives
 ```
 
 - 检查安装手册中提到的依赖包(如果没有，挂在镜像yum源进行安装(64 bit))
-```
+```shell
 yum list | grep glibc
 yum list | grep libXp
 yum list | grep libXmu
 yum list | grep numactl
-
 python --version
 ```
 
@@ -22,7 +21,6 @@ python --version
 #::1         localhost localhost.localdomain localhost6 localhost6.localdomain6 -- 注掉
 10.124.109.180  TES-AFS --  只能是字母，中划线,不能包含数字，下划线等
 10.124.109.190  DVAFSDB -- 数据库hostname，必须配置
-
 如果是多台同用途SAS Server，hostname必须必须要设置为同一个(找机会确认原因并标注)
 ```
 
@@ -61,7 +59,6 @@ DefaultLimitNPROC=65536
 调整为为：
 *          soft    nproc     65536
 root       soft    nproc     unlimited
-
 上述配置 需要reboot生效
 ```
 
@@ -83,15 +80,13 @@ chown -R sas:sas /home/sasconfig
 chmod -R 755 /home/sasconfig
 ```
 
-- 数据库客户端配置
+- 数据库客户端配置(**Schema Name 指的是用户名**)
 ```
 以Oracle为例：
 1.安装Oracle对应服务器版本的客户端，配置环境变量
 2.配置/etc/hosts
   追加内容：数据库IP “hostname”
 3.在sas用户可见的目录下准备好 ojdbc jar
-
-注：Schema Name 指的是用户名
 ```
 
 - 安装用户sas下配置环境变量
