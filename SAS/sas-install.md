@@ -19,8 +19,8 @@ python --version
 /etc/hosts:
 #127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4 -- 注掉
 #::1         localhost localhost.localdomain localhost6 localhost6.localdomain6 -- 注掉
-10.124.109.180  TES-AFS --  只能是字母，中划线,不能包含数字，下划线等
-10.124.109.190  DVAFSDB -- 数据库hostname，必须配置  
+10.124.109.180  TES-AFS \-\-  只能是字母，中划线,不能包含数字，下划线等
+10.124.109.190  DVAFSDB \-\- 数据库hostname，必须配置
 
 如果是多台同用途SAS Server，hostname必须必须要设置为同一个(找机会确认原因并标注)
 ```
