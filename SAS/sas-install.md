@@ -2,31 +2,29 @@
 
 - ssh客户端保持连接，安装中途不能中断
 ```
-putty -> Connection -> Seconds between keepalives ( 0 to turn off ), 默认为0, 改为60.
+putty -> Connection -> Seconds between keepalives
 ```
 
-- 检查安装手册中提到的依赖包
+- 检查安装手册中提到的依赖包(如果没有，挂在镜像yum源进行安装(64 bit))
 ```
 yum list | grep glibc
 yum list | grep libXp
 yum list | grep libXmu
 yum list | grep numactl
 
-如果没有，挂在镜像yum源进行安装(64 bit)
-
 python --version
 ```
 
-<font color="Red">注：特别注意</font>
-- 检查hosts配置
+- 检查hosts配置(**特别注意**)
 ```
 /etc/hosts:
 #127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4 -- 注掉
 #::1         localhost localhost.localdomain localhost6 localhost6.localdomain6 -- 注掉
 10.124.109.180  TES-AFS --  只能是字母，中划线,不能包含数字，下划线等
 10.124.109.190  DVAFSDB -- 数据库hostname，必须配置
+
+如果是多台同用途SAS Server，hostname必须必须要设置为同一个(找机会确认原因并标注)
 ```
-<font color="Red">注：如果是多台同用途SAS Server，hostname必须必须要设置为同一个(找机会确认原因并标注)</font>
 
 - 创建用户并设置密码
 ```shell
@@ -97,7 +95,7 @@ chmod -R 755 /home/sasconfig
 ```
 
 - 安装用户sas下配置环境变量
-```
+```shell
 #export PATH
 export ORACLE_BASE=/u01/app/oracle;
 export ORACLE_HOME=$ORACLE_BASE/product/11.2.0/db_1;
@@ -108,7 +106,7 @@ export PATH=$ORACLE_HOME/bin:$PATH:$HOME/.local/bin:$HOME/bin;
 export LD_LIBRARY_PATH=$ORACLE_HOME/lib:/lib:/usr/lib;
 export CLASSPATH=$ORACLE_HOME/JRE:$ORACLE_HOME/jlib:$ORACLE_HOME/rdbms/jlib;
 ```
-<font color="Red">注：修改$ORACLE_BASE文件夹目录权限775</font>
+`注：修改$ORACLE_BASE文件夹目录权限775`
 
 - 安装过程中特别注意项
 1. SAS Metadate Server : Overwirte Backup Location
