@@ -49,12 +49,12 @@ chmod -R 755 /home/depot
 ```
 /etc/systemd/system.conf
 追加内容为:
-	DefaultLimitNOFILE=350000
-	DefaultLimitNPROC=65536
+DefaultLimitNOFILE=350000
+DefaultLimitNPROC=65536
 /etc/security/limits.d/20-nproc.conf
 调整为为:
-	*          soft    nproc     65536
-	root       soft    nproc     unlimited
+*          soft    nproc     65536
+root       soft    nproc     unlimited
 上述配置 需要reboot生效
 ```
 
