@@ -40,7 +40,6 @@ password sassrv sas@123456
 chown -R sas:sas /home/depot
 chmod -R 755 /home/depot
 ```
-
 - 检查字符串
 ```
 查看系统字符集为 : en_US.UTF-8(支持显示中文，但不能输入中文)
@@ -70,10 +69,8 @@ systemctl status firewalld
 ```shell
 mkdir /home/sashome
 mkdir /home/sasconfig
-
 chown -R sas:sas /home/sashome
 chmod -R 755 /home/sashome
-
 chown -R sas:sas /home/sasconfig
 chmod -R 755 /home/sasconfig
 ```
