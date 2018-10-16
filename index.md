@@ -6,5 +6,5 @@ I'm learning...
 
 
 ### SAS Relation
-[install](#SAS/sas-install.md)
+[install](#www.baidu.com)
 
