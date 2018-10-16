@@ -1,1 +1,6 @@
 baseurl: /blog
+title: Blog
+description: shawn:This is my blog.
+google_analytics: 
+show_downloads: true
+theme: jekyll-theme-architect
