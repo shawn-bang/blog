@@ -1,6 +1,6 @@
 baseurl: /blog
-title: Blog
-description: shawn:This is my blog.
+title: Shawn Blog
+description: What are you make of ?
 google_analytics: 
-show_downloads: true
+show_downloads: no
 theme: jekyll-theme-cayman
