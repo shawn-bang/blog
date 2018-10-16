@@ -30,7 +30,6 @@ groupadd sas
 useradd -g sas sas
 useradd -g sas sasdemo
 useradd -g sas sassrv
-
 password sas sas@123456
 password sasdemo sas@123456
 password sassrv sas@123456
