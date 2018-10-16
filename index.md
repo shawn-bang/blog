@@ -6,5 +6,5 @@ I'm learning...
 
 
 ### SAS Relation
-[install](#www.baidu.com)
+[install](http://shawn-bang.github.io/blog/SAS/sas-install)
 
