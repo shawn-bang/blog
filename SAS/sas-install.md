@@ -21,6 +21,7 @@ python --version
 #::1         localhost localhost.localdomain localhost6 localhost6.localdomain6 -- 注掉
 10.124.109.180  TES-AFS --  只能是字母，中划线,不能包含数字，下划线等
 10.124.109.190  DVAFSDB -- 数据库hostname，必须配置
+<br>
 如果是多台同用途SAS Server，hostname必须必须要设置为同一个(找机会确认原因并标注)
 ```
 
@@ -53,7 +54,7 @@ chmod -R 755 /home/depot
 追加内容：
 DefaultLimitNOFILE=350000
 DefaultLimitNPROC=65536
-
+<br>
 /etc/security/limits.d/20-nproc.conf
 调整为为：
 *          soft    nproc     65536
